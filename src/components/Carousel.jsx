@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Carousel.css'; // Importa el archivo CSS separado
 
 import img1 from '../assets/carrusel/furniture-image_2623072.png';
@@ -12,8 +12,17 @@ const images = [img1, img2, img3]; // Agrega las imágenes importadas al array d
 const Carousel = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [currentImage]);
+
   const goToNextImage = () => {
     setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+    
   };
 
   const goToPreviousImage = () => {
