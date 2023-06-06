@@ -37,7 +37,7 @@ function Footer() {
       </footer>
       <footer className="footer2">
         <div className="rights-reserved">
-          <p>Todos los derechos reservados &copy; 2023</p>
+          <p>Todos los derechos reservados &copy; 2023 Rattanmerce</p>
         </div>
       </footer>
     </>
