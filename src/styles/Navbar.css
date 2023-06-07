@@ -1,10 +1,12 @@
 @import '/node_modules/@fortawesome/fontawesome-free/css/all.css';
 
 .navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: rgba(51, 51, 51, 0.8);
   color: white;
   padding: 8px;
 }
@@ -102,22 +104,4 @@
   border-radius: 50%;
   margin-left: 5px;
   font-weight: bold;
-}
-@media (max-width: 730px) {
-  .navbar {
-    flex-direction: column;
-    padding: 10px 20px;
-  }
-
-  .navbar-left {
-    margin-bottom: 10px;
-  }
-
-  .navbar-right {
-    margin-top: 10px;
-  }
-
-  .cart-icon {
-    margin-left: 0;
-  }
 }
