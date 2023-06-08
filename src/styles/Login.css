@@ -1,0 +1,68 @@
+/* Login.css */
+
+.login-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .logo-container img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .form-container {
+    margin-top: 20px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  .register-container {
+    margin-top: 20px;
+  }
+  
+  .footer-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .footer-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .footer-links a:hover {
+    color: #007bff;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  

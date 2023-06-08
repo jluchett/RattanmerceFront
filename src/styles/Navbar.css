@@ -1,7 +1,7 @@
 @import '/node_modules/@fortawesome/fontawesome-free/css/all.css';
 
 .navbar {
-  position: fixed;
+  
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -47,12 +47,13 @@
 }
 
 .search-button {
-  padding: 10.4px 10px;
+  padding: 7.7px 10px;
   background-color:chocolate;
   color: white;
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
+  font-size: 18px;
 }
 
 .navbar-right {
@@ -100,8 +101,27 @@
   right: 20px;
   background-color: chocolate;
   color: white;
-  padding: 2px 6px;
+  padding: 4px 6px;
   border-radius: 50%;
   margin-left: 5px;
   font-weight: bold;
+  font-size: 12px;
+}
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .navbar-left {
+    margin-bottom: 10px;
+  }
+
+  .navbar-right {
+    margin-top: 10px;
+  }
+
+  .cart-icon {
+    margin-left: 0;
+  }
 }

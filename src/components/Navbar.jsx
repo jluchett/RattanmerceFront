@@ -12,12 +12,14 @@ const Navbar = () => {
       </div>
       <div className="navbar-center">
         <input type="text" className="search-bar" placeholder="Buscar" />
-        <button className="search-button">Buscar</button>
+        <button className="search-button">
+          <i className="fa-solid fa-magnifying-glass"></i>
+        </button>
       </div>
       <div className="navbar-right">
         <div className="user-info">
-          <span className="username">jluchett@gmail.com</span>
-          <button className="logout-button">Cerrar sesion</button>
+          <span className="username">Hola, Bienvenido</span>
+          <button className="logout-button">Inicia sesion</button>
         </div>
         <a href="/cart" className="cart-icon">
           <i className="fa-solid fa-cart-shopping"></i>
