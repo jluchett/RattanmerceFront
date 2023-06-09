@@ -26,7 +26,7 @@ const Login = () => {
       </div>
       <div className="footer-container">
         <hr />
-        <div className="footer-links">
+        <div className="footer-links">  
           <a href="#">Términos y condiciones</a>
           <a href="#">Aviso de privacidad</a>
         </div>

@@ -1,4 +1,4 @@
-@import '/node_modules/@fortawesome/fontawesome-free/css/all.css';
+@import "/node_modules/@fortawesome/fontawesome-free/css/all.css";
 
 .navbar {
   width: 100%;
@@ -47,12 +47,15 @@
 
 .search-button {
   padding: 7.7px 10px;
-  background-color:chocolate;
+  background-color: chocolate;
   color: white;
   border: none;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   font-size: 18px;
+}
+.search-button:hover{
+  background-color: rgb(213, 120, 55);
 }
 
 .navbar-right {
@@ -73,13 +76,18 @@
 
 .logout-button {
   padding: 2px 10px;
-  background-color: #f44336;
+  background-color:olivedrab;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
+  font-size: 13px;
   font-weight: bold;
+  text-decoration: none;
+}
+.logout-button:hover {
+  background-color:rgb(139, 179, 60);
 }
 
 .cart-icon {
@@ -95,11 +103,14 @@
   margin-right: 18px;
   margin-left: 5px;
 }
+.cart-icon:hover {
+  color: dodgerblue;
+}
 
 .badge {
   position: absolute;
   top: -1px;
-  right: 30px;
+  right: 20px;
   background-color: chocolate;
   color: white;
   padding: 4px 6px;

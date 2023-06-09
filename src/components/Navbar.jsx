@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import logo from "../assets/logo2.png";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 
 const Navbar = () => {
@@ -20,12 +20,14 @@ const Navbar = () => {
       <div className="navbar-right">
         <div className="user-info">
           <span className="username">Hola, Bienvenido</span>
-          <Link className="logout-button" to="/login">Inicia sesión</Link>
+          <Link className="logout-button" to="/login">
+            <span className="login-text">Inicia sesión</span>
+          </Link>
         </div>
-        <a href="/cart" className="cart-icon">
+        <Link to="/cart" className="cart-icon">
           <i className="fa-solid fa-cart-shopping"></i>
-          <span className="badge">99</span>
-        </a>
+          <span className="badge">24</span>
+        </Link>
       </div>
     </nav>
   );

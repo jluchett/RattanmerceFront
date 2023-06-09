@@ -7,7 +7,6 @@
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   text-align: center;
- 
 }
 
 .logo-container {
@@ -33,7 +32,7 @@
   text-align: left;
 }
 
-form input {
+.form-container form input {
   width: 94%;
   padding: 8px;
   margin-bottom: 10px;
@@ -41,7 +40,7 @@ form input {
   border-radius: 5px;
 }
 
-form button {
+.form-container form button {
   width: 100%;
   padding: 8px;
   background-color: #007bff;
@@ -51,7 +50,7 @@ form button {
   cursor: pointer;
 }
 
-p {
+.footer-container p {
   margin-bottom: 10px;
   font-size: 14px;
 }
@@ -65,18 +64,18 @@ p {
   text-align: center;
 }
 
-a {
+.footer-container a {
   margin-right: 10px;
-  text-decoration: none;  
+  text-decoration: none;
   color: #333;
   font-size: 12px;
 }
 
-a:hover {
+.footer-container a:hover {
   color: #007bff;
 }
 
-hr {
+.footer-container hr {
   border: none;
   border-top: 1px solid #ccc;
   margin: 40px;
