@@ -32,6 +32,16 @@
   text-align: left;
 }
 
+.login-condition {
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+}
+
+.login-condition:hover {
+  color:#007bff;
+}
+
 .form-container form input {
   width: 94%;
   padding: 8px;
@@ -57,6 +67,22 @@
 
 .register-container {
   margin-top: 20px;
+  font-size: 13px;
+}
+.register-container p{
+  margin-bottom: 5px;
+}
+.register-container button{
+  width: 55%;
+  font-size: 12px;
+  padding: 4px;
+  background-color:goldenrod;
+  border: none;
+  border-radius: 3px;
+}
+.register-container button:hover{
+  cursor: pointer;
+  background-color:rgb(255, 209, 92);
 }
 
 .footer-container {
@@ -78,5 +104,4 @@
 .footer-container hr {
   border: none;
   border-top: 1px solid #ccc;
-  margin: 40px;
 }

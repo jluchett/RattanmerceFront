@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import Logo from "../assets/logo2.png";
+import { Link } from "react-router-dom";
 import "../styles/Login.css"; // Archivo CSS para los estilos del componente
 
 const Login = () => {
@@ -17,11 +18,17 @@ const Login = () => {
             <input type="email" placeholder="Correo electrónico" />
             <button type="submit">Enviar</button>
           </form>
-          <a href="#">Condiciones de uso y aviso de privacidad</a>
+          <Link to="/terminos" className="login-condition">
+            <p>Condiciones de uso y aviso de privacidad</p>
+          </Link>
         </div>
         <div className="register-container">
-          <p>¿Aún no tienes cuenta?</p>
-          <button>Regístrate en nuestra página</button>
+        <p>¿Aún no tienes cuenta?</p>
+          <Link to="/register">
+          
+          <button>Regístrate aquí</button>
+          </Link>
+          
         </div>
       </div>
       <div className="footer-container">
