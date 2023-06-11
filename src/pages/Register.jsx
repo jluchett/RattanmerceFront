@@ -9,6 +9,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [registrationSuccess, setRegistrationSuccess] = useState(false);
 
   const validateEmail = (email) => {
     // Función de validación de correo electrónico
@@ -50,23 +51,16 @@ const Register = () => {
       .then((response) => {
         if (response.ok) {
           // Registro exitoso, puedes redirigir a la página de inicio de sesión
-          console.log("respuesta ok")
+          setRegistrationSuccess(true);
         } else {
           // Manejo de errores, por ejemplo:
-          throw new Error("Error en la solicitud");
+          console.log("hola no se registro")
         }
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error);
         setErrorMessage("Ocurrió un error durante el registro.");
       });
-    // Resetear los campos de entrada y mostrar mensaje de éxito
-    setEmail("");
-    setPassword("");
-    setConfirmPassword("");
-    setErrorMessage("¡Registro exitoso!");
-
-    // Aquí puedes redirigir a la página de inicio de sesión u otra página
   };
   return (
     <>
@@ -75,48 +69,58 @@ const Register = () => {
         <h1>Rattanmerce</h1>
       </div>
       <div className="registro-container">
-        <div className="form-container">
-          <h2>Crea tu cuenta</h2>
-          <form onSubmit={handleSubmit}>
-            <span>Correo electrónico</span>
-            <input
-              type="email"
-              placeholder="Correo electrónico"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <span>Contraseña</span>
-            <input
-              type="password"
-              name="contra"
-              placeholder="Debe tener minimo 8 caracteres"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <span>Confirmar contraseña</span>
-            <input
-              type="password"
-              name="confContra"
-              placeholder="Vuelve a escribir la contraseña"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            />
-            {errorMessage && (
-              <span className="error-message">{errorMessage}</span>
-            )}
-            <button type="submit">Enviar</button>
-          </form>
-          <Link to="/terminos" className="login-condition">
-            <p>Condiciones de uso y aviso de privacidad</p>
-          </Link>
-        </div>
-        <div className="register-container">
-          <p>¿Ya tienes cuenta?</p>
-          <Link to="/login">
-            <button>Inicia sesión aquí</button>
-          </Link>
-        </div>
+        {!registrationSuccess ? (
+          <div className="form-container">
+            <h2>Crea tu cuenta</h2>
+            <form onSubmit={handleSubmit}>
+              <span>Correo electrónico</span>
+              <input
+                type="email"
+                placeholder="Correo electrónico"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <span>Contraseña</span>
+              <input
+                type="password"
+                name="contra"
+                placeholder="Debe tener minimo 8 caracteres"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <span>Confirmar contraseña</span>
+              <input
+                type="password"
+                name="confContra"
+                placeholder="Vuelve a escribir la contraseña"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+              />
+              {errorMessage && (
+                <span className="error-message">{errorMessage}</span>
+              )}
+              <button type="submit">Enviar</button>
+            </form>
+            <Link to="/terminos" className="login-condition">
+              <p>Condiciones de uso y aviso de privacidad</p>
+            </Link>
+            <div className="register-container">
+              <p>¿Ya tienes cuenta?</p>
+              <Link to="/login">
+                <button>Inicia sesión aquí</button>
+              </Link>
+            </div>
+          </div>
+        ) : (
+          <div className="success-container">
+            <h2>¡Registro exitoso!</h2>
+            <Link to="/login">
+              <button>Inicia sesión aquí</button>
+            </Link>
+          </div>
+        )}
       </div>
+
       <div className="footer-container">
         <hr />
         <div className="footer-links">
