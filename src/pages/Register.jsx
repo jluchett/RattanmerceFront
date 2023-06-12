@@ -48,13 +48,15 @@ const Register = () => {
         password: password,
       }),
     })
-      .then((response) => {
-        if (response.ok) {
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
           // Registro exitoso, puedes redirigir a la página de inicio de sesión
           setRegistrationSuccess(true);
+          setErrorMessage(data.message);
         } else {
           // Manejo de errores, por ejemplo:
-          console.log("hola no se registro")
+          setErrorMessage(data.message);
         }
       })
       .catch((error) => {
@@ -78,7 +80,10 @@ const Register = () => {
                 type="email"
                 placeholder="Correo electrónico"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  setErrorMessage("");
+                }}
               />
               <span>Contraseña</span>
               <input
@@ -86,7 +91,10 @@ const Register = () => {
                 name="contra"
                 placeholder="Debe tener minimo 8 caracteres"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  setErrorMessage("");
+                }}
               />
               <span>Confirmar contraseña</span>
               <input
@@ -94,7 +102,10 @@ const Register = () => {
                 name="confContra"
                 placeholder="Vuelve a escribir la contraseña"
                 value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
+                onChange={(e) => {
+                  setConfirmPassword(e.target.value);
+                  setErrorMessage("");
+                }}
               />
               {errorMessage && (
                 <span className="error-message">{errorMessage}</span>
@@ -113,7 +124,7 @@ const Register = () => {
           </div>
         ) : (
           <div className="success-container">
-            <h2>¡Registro exitoso!</h2>
+            <h2>{errorMessage}</h2>
             <Link to="/login">
               <button>Inicia sesión aquí</button>
             </Link>
