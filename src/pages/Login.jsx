@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Logo from "../assets/logo2.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import queryString from 'query-string';
 import "../styles/Login.css"; // Archivo CSS para los estilos del componente
 
 const Login = () => {
@@ -34,8 +35,8 @@ const Login = () => {
           setLoading(false);
           if (data.success) {
             // Redirigir a la página de inicio de sesión exitosa
-            
-            navigate("/singin");
+            const queryParams = queryString.stringify({ email }); // Formatear el email como parámetro de URL
+            navigate('/singin', { state: { email }, search: queryParams }); // Pasar el email como estado y parámetro de URL
           } else {
             console.log(data)
             setIsValid(data.message);
