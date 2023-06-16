@@ -13,7 +13,7 @@ const Navbar = () => {
       </div>
       <div className="navbar-center">
         <input type="text" className="search-bar" placeholder="Buscar" />
-        <button className="search-button">
+        <button className="search-button">  
           <i className="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
