@@ -9,13 +9,12 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-left">
         <img src={logo} alt="Logo" className="logo" />
-        <span className="company-name">Rattanmerce</span>
+        <span className="company-name">Rattan Pet Palaces</span>
       </div>
       <div className="navbar-center">
-        <input type="text" className="search-bar" placeholder="Buscar" />
-        <button className="search-button">  
-          <i className="fa-solid fa-magnifying-glass"></i>
-        </button>
+        <span className="span">Inicio</span>
+        <span className="span">Categorias</span>
+        <span className="span">Productos</span>
       </div>
       <div className="navbar-right">
         <div className="user-info">
