@@ -57,7 +57,7 @@ const Register = () => {
         } else {
           // Manejo de errores, por ejemplo:
           setErrorMessage(data.message);
-        }
+        } 
       })
       .catch((error) => {
         console.log(error);
