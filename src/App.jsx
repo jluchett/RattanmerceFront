@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound";
 import Register from "./pages/Register";
 import Signin from "./pages/Singin";
 import Forgot from "./pages/Forgot";
+import ResetPass from "./pages/ResetPass";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/singin" element={<Signin />} />
           <Route path="/forgot" element={<Forgot />} />
+          <Route path="/resetPass/:resetToken" element={<ResetPass />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AuthProvider>
